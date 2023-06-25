@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intention Predictor
+	</title>
+	<style>
+	*{
+		padding:0px;
+		margin: 0px;
+	}
+	body{
+		height:100vh;
+		width: 100%;
+	}
+	.main{
+		height:100%;
+		width:100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.main__nav{
+		height:60px;
+		display: flex;
+		/*padding: 10px;*/
+		flex-direction: row;
+		justify-content:space-between;
+		background:black;
+	}
+	.main__body{
+		text-align:center;
+		align-items: center;
+		justify-content: center;
+		font-size: 40px;
+		display: flex;
+		height:100vh;
+		background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
+		background-size: cover;
+		background-repeat: no-repeat;
+		flex-direction: column;
+	}
+	.main__body input{
+		/*height:140px;*/
+		transform: scale(2,2);
+		margin-top:50px;
+		/*border:4px solid red;*/
+	}
+	.main__body img{
+		/*border:1px solid red;*/
+		width:100%;
+		height:93vh;
+		/*font-size: 40px;*/
+	}
+	.main__nav a{
+		margin:auto;
+		padding: 10px;
+		padding-left: 24px;
+		padding-right:24px;
+		font-size: 30px;
+		text-decoration: none;
+		color:white;
+	}
+	.main__body button{
+		padding: 5px;
+		padding-left:10px;
+		padding-right: 10px;
+		border-radius:6px;
+		border:1px solid silver;
+		margin-top: 70px;
+		transform: scale(2,2);
+	}
+	.main__nav a:hover{
+		background:green;
+	}
+</style>
+</head>
+
+<body>
+<div class="main">
+	<div class="main__nav">
+		<a href="/">Home</a>
+		<a href="/train">Train</a>
+		<a href="/test">Test</a>
+		<a href="/analysis">Analysis</a>
+		<a href="/about">About Us</a>
+	</div>
+	<form class="main__body" action="/predict" method="POST" enctype = "multipart/form-data">
+		<h1>Enter the csv file to predict intention</h1>
+		<input type="file" name="file">
+		<button type="submit">submit</button>
+	</form>
+</div>
+</body>
+</html>
