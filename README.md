@@ -1,1 +1,1 @@
-# Intention_prediction
+# Predicting consumer purchase intention using twitter data
